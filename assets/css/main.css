@@ -1,0 +1,133 @@
+/* Geral */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@400;800&display=swap');
+
+:root{
+    --primary-color: #69B99D;
+    --secondary-color: #CCF4E6;
+    --gradient-color: linear-gradient(270deg, #69B99D 0%, rgba(204, 244, 230, 0.34) 100%);
+    --dark-color: #0F241D;
+    --gray-color:#767676;
+    --bg-color:#F9F9F9;
+    font-size: 62.5%;
+    --nav-heigth: 4.5rem
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    overflow: auto;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'DM Sans', sans-serif;
+    color:#000000;
+    background-color: #FFFFFF;
+}
+
+h1,h2{
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
+}
+
+h1{
+    font-size: 2.1rem;
+    line-height: 3.2rem;
+}
+
+h2{
+    font-size: 3rem;
+    line-height: 4.5rem;
+}
+
+p{
+    line-height: 2.1rem;
+    text-align: center;
+    color: var(--gray-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    border: none;
+}
+section{
+    padding-block: 8rem;
+}
+
+.wrapper{
+    width: min(37.5rem, 100%);
+    margin: 0 auto;
+    padding-inline: 2.4rem;
+    box-sizing: border-box;
+}
+/* Geral */
+/* Header Nav */
+
+#header{
+    border-bottom: 1px solid #ededed;
+}
+
+#header nav{
+    height: var(--nav-heigth);
+    padding-block: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header a.logo{
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+#header a.logo span{
+    color: var(--primary-color);
+}
+/* Header Nav */
+/* Home */
+#home{
+    background-color: var(--bg-color);
+    height: calc(64.5rem - var(--nav-height));
+}
+
+#home .wrapper img{
+    margin: 0;
+    padding: 0;
+}
+
+#home img{
+    box-shadow: 50px -32px 0px 0px var(--secondary-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#home h2{
+    margin: 3.2rem 0 1.6rem 0;
+    text-align: center;
+}
+
+#home p{
+    margin-bottom: 3.2rem;
+}
+
+#home a.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 3.2rem;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    margin-inline: 5.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--bg-color);
+}
+/* Home */
