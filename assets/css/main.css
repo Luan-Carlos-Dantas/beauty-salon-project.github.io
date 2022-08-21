@@ -71,10 +71,16 @@ ul{
     list-style: none;
 }
 
+
 #divider-1{
     position: relative;
     height: 2px;
     background: linear-gradient(270deg, #69B99D 0%, rgba(204, 244, 230, 0.34) 100%);
+}
+
+#divider-2{
+    height: 2px;
+    background:linear-gradient(180deg, #69B99D 0%, rgba(204, 244, 230, 0.34) 100%);
 }
 
 .title{
@@ -134,19 +140,32 @@ ul{
     position: relative;
 }
 
+nav .fa-solid.fa-xmark,
+nav .fa-solid.fa-bars{
+    cursor: pointer;
+}
+
+nav .fa-solid.fa-bars{
+    font-size: 2.4rem;
+}
+
 nav .fa-solid.fa-xmark{
     visibility: hidden;
     opacity: 0;
+    transform: translatey(-100%);
+    
 }
 
-nav.show .fa-solid.fa-xmark{
+body.show .fa-solid.fa-xmark{
     visibility: visible;
     opacity: 1;
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     position: absolute;
-    right: 2rem;
+    right: 0;
+    z-index: 100;
+    transition: transform .4s ease-in;
+    transform: translatey(0);
 }
-
 
 
 nav ul li{
@@ -181,9 +200,20 @@ nav ul li a:hover::after{
 nav .menu {
     opacity: 0;
     visibility: hidden;
+    transform: translateY(100%);
+    transition: transform .4s ease-in;
 }
 
-nav.show .menu{
+body.show a.logo,
+body.show .fa-solid.fa-bars{
+    display: none;
+}
+
+body.show > :not(nav){
+    display: none;
+}
+
+body.show .menu{
     opacity: 1;
     visibility: visible;
     background: var(--bg-color);
@@ -193,18 +223,16 @@ nav.show .menu{
     left: 0;
     width: 100vw;
     height: 100vh;
-}
-
-nav.show{
     display: grid;
     place-content: center;
+    transform: translateY(0);
+    z-index: 100;
 }
 
-nav.show ul.grid{
+body.show ul.grid{
     gap: 6.4rem;
 }
 
-nav.show .menu
 /* Header Nav */
 /* Home */
 #home{
@@ -304,8 +332,8 @@ nav.show .menu
     background-color: var(--primary-color);
 
     position: absolute;
-    top: -16.5%;
-    left: -18.8rem;
+    top: -8.3%;
+    left: -33%;
     border-radius: 4px;
     z-index: -1;
 }
