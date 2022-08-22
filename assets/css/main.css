@@ -34,7 +34,7 @@ main{
     padding-top:3.2rem;
 }
 
-h1,h2{
+h1,h2,h3{
     font-family: 'Poppins', sans-serif;
     color: var(--dark-color);
 }
@@ -47,6 +47,11 @@ h1{
 h2{
     font-size: 3rem;
     line-height: 4.5rem;
+}
+
+h3.title{
+    font-size: 2.4rem;
+    line-height: 3.6rem;
 }
 
 p{
@@ -67,9 +72,19 @@ section{
     padding-block: 8rem;
 }
 
+section header{
+    margin-bottom: 6.4rem;
+}
+
+section header strong{
+    color: var(--primary-color)
+}
+
 ul{
     list-style: none;
 }
+
+
 
 
 #divider-1{
@@ -115,6 +130,10 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+#header.scroll{
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.08);
 }
 
 
@@ -163,7 +182,7 @@ body.show .fa-solid.fa-xmark{
     position: absolute;
     right: 0;
     z-index: 100;
-    transition: transform .4s ease-in;
+    transition: transform .3s ease-in;
     transform: translatey(0);
 }
 
@@ -200,8 +219,8 @@ nav ul li a:hover::after{
 nav .menu {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(100%);
-    transition: transform .4s ease-in;
+    transform: translateY(-100%);
+    transition: transform .2s ease-in;
 }
 
 body.show a.logo,
@@ -230,7 +249,7 @@ body.show .menu{
 }
 
 body.show ul.grid{
-    gap: 6.4rem;
+    gap: 5.4rem;
 }
 
 /* Header Nav */
@@ -349,3 +368,153 @@ body.show ul.grid{
 }
 
 /* About */
+
+/* Services */
+
+#services{
+    background-color: var(--bg-color);
+}
+
+#services header p{
+    text-align: left;
+    color: var(--dark-color);
+}
+
+#services .cards.grid{
+    gap: 2.4rem;
+}
+
+.card{
+    padding: 5.8rem 3.2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: .4rem solid var(--primary-color);
+    border-radius: .4rem .4rem 0 0;
+    text-align: center;
+}
+
+.card .icon{
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+.card h3.title{
+    margin-bottom: 1.2rem;
+}
+
+
+/* Services */
+/* Testimonials */
+#testimonials{
+    background-color: #FFFFFF;
+}
+
+#testimonial .wrapper{
+    padding-inline: 0;
+}
+
+#testimonials header{
+    padding-inline: 2.4rem;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#testimonials blockquote{
+    padding: 3.2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-radius: .4rem;
+}
+
+#testimonials blockquote p{
+    position: relative;
+    line-height: 2.6rem;
+    color: var(--dark-color);
+    text-align: left;
+    text-indent: 3rem;
+    margin-bottom: 2.4rem;
+}
+
+#testimonials blockquote p span{
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 5rem;
+    font-family: serif;
+    position: absolute;
+    left: -3rem;
+    top: 0.8rem;
+}
+
+#testimonials cite {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    color: var(--gray-color);
+}
+
+#testimonials cite img{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    clip-path: circle();
+}
+
+.swiper-slide{
+    height: auto;
+    padding: 6.4rem 1.6rem;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--primary-color);
+}
+
+/* Testimonials */
+
+#contact{
+    background-color: var(--bg-color);
+    text-align: left;
+}
+
+#contact header h2{
+    margin-bottom: 1.6rem;
+    text-align: left;
+}
+
+#contact header p{
+    margin-bottom: 3.2rem;
+    text-align: left;
+}
+
+#contact a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1.5rem 3.2rem;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    margin-right: 11rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--bg-color);
+    transition: background-color .3s ease-in-out;
+}
+
+#contact a:hover{
+    background-color: var(--dark-color);
+}
+
+#contact a i{
+    margin-right: 1rem;
+}
+
+#contact ul.grid{
+    gap:3.2rem;
+}
+
+#contact ul li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
