@@ -84,7 +84,15 @@ ul{
     list-style: none;
 }
 
-
+.backToTop{
+    position: fixed;
+    bottom: 3rem;
+    right: 1.5rem;
+    font-size: 4rem;
+    color: var(--dark-color);
+    transition: 0.3 ease-in-out;
+    z-index: 200;
+}
 
 
 #divider-1{
@@ -375,6 +383,10 @@ body.show ul.grid{
     background-color: var(--bg-color);
 }
 
+#services header h2{
+    margin-bottom: 1.6rem;
+}
+
 #services header p{
     text-align: left;
     color: var(--dark-color);
@@ -470,6 +482,7 @@ body.show ul.grid{
 
 /* Testimonials */
 
+/* Contact */
 #contact{
     background-color: var(--bg-color);
     text-align: left;
@@ -518,3 +531,50 @@ body.show ul.grid{
     align-items: center;
     gap: 1rem;
 }
+/* Contact */
+
+/* Footer */
+
+footer{
+    background-color: var(--primary-color);
+}
+
+footer .col-a h1{
+    margin-bottom: 2.4rem;
+}
+
+footer .col-a h1 a.logo{
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 3.2rem;
+}
+
+footer .col-a h1 a.logo span{
+    color: var(--bg-color);
+}
+
+footer .col-a p{
+    color: var(--bg-color);
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+
+footer .col-b .social{
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+    font-size: 2.4rem;
+}
+
+footer .col-b .social li a{
+    color: var(--bg-color);
+}
+
+footer .col-b .social li a:hover{
+    color: var(--dark-color);
+}
+
+
+
+/* Footer */
+
