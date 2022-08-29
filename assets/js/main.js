@@ -6,7 +6,7 @@ const headerHeight = header.offsetHeight;
 
 for (const element of toggle) {
   element.addEventListener("click", () => {
-    if (!navMenu.classList.contains("show")) {
+    if (!navMenu.classList.contains("show") && innerWidth < 992 ) {
       navMenu.classList.add("show");
     } else {
       navMenu.classList.remove("show");
@@ -50,6 +50,12 @@ const swiper = new Swiper(".swiper", {
   },
   mousewheel: true,
   keyboard: true,
+  breakpoints:{
+    992:{
+      slidesPerView:2,
+      setWrapperSize:true
+    }
+  }
 });
 
 // Scroll Review
@@ -62,5 +68,5 @@ const scrollreveal = ScrollReveal({
 });
 
 scrollreveal.reveal(
-  `#home .col-a, #home .col-b, #about .col-a, #about .col-b, #services header, #services .cards .card, #testimonials header, #testimonials .testimonials, #contact header, #contact article ul li, footer .col-a, footer .col-b`
+  `#home .col-a, #home .col-b, #about .col-a, #about .col-b, #services header, #services .cards, #testimonials header, #testimonials .testimonials, #contact header, #contact article ul li, footer .col-a, footer .col-b`
 );
